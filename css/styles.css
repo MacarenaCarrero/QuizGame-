@@ -22,3 +22,44 @@ body {
   margin: 0;
   font-family: sans-serif;
 }
+.numberOfQuestions {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.rangeQuestions {
+  width: 150px;
+}
+.firstSteps {
+  padding: 50px;
+}
+.themes {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.time {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 50px;
+}
+.titles {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.questions {
+  padding-inline: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.containerButtonPlay {
+  display: flex;
+  flex-direction: column;
+}
+.button {
+  width: 150px;
+}
+.selectionTheme {
+  margin-bottom: 10px;
+}

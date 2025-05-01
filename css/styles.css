@@ -22,6 +22,9 @@ body {
   margin: 0;
   font-family: sans-serif;
 }
+.configurationPlay{
+  
+}
 .numberOfQuestions {
   display: flex;
   flex-direction: column;
@@ -51,7 +54,8 @@ body {
 .questions {
   padding-inline: 50px;
   display: flex;
-  flex-direction: column;
+ flex-direction: column;
+  /* display: none; */
 }
 .containerButtonPlay {
   display: flex;
@@ -62,4 +66,17 @@ body {
 }
 .selectionTheme {
   margin-bottom: 10px;
+}
+.responseButton{
+  width: 200px;
+  height: 50px;
+}
+.containerButtonsResponse{
+display: grid;
+grid-template-columns: repeat(2, 250px);
+gap: 20px;
+
+}
+.hide{
+  display: none;
 }

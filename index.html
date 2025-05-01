@@ -9,73 +9,78 @@
   <body>
     <header></header>
     <main>
-      <!-- div cuantas preguntas quieres? -->
-      <div class="firstSteps">
-        <div id="numberOfQuestions" class="numberOfQuestions">
-          <span class="titles">¿Cuántas preguntas quieres?</span>
-          <!-- div del numero y range  -->
-          <div>
-            <span id="numberRange" class="numberRange">0</span>
-            <input
-              id="range"
-              type="range"
-              min="5"
-              max="30"
-              class="rangeQuestions"
-            />
+      <!-- pantalla configuracion juego -->
+      <div id="configurationPlay" class="configurationPlay">
+        <!-- div cuantas preguntas quieres? -->
+        <div class="firstSteps">
+          <div id="numberOfQuestions" class="numberOfQuestions">
+            <span class="titles">¿Cuántas preguntas quieres?</span>
+            <!-- div del numero y range  -->
+            <div>
+              <span id="numberRange" class="numberRange">0</span>
+              <input
+                id="range"
+                type="range"
+                min="5"
+                max="30"
+                class="rangeQuestions"
+              />
+            </div>
           </div>
-        </div>
-        <!--  -->
-        <!-- container radios -->
-        <div id="time" class="time">
-          <span class="titles">¿Cuánto tiempo quieres por pregunta?</span>
-          <div class="">
-            <label for="10sec">10</label>
-            <input type="radio" id="10sec" name="radio" value="10 sec" />
+          <!--  -->
+          <!-- container radios -->
+          <div id="time" class="time">
+            <span class="titles">¿Cuánto tiempo quieres por pregunta?</span>
+            <div class="">
+              <label for="10sec">10</label>
+              <input type="radio" id="10sec" name="radio" value="10 sec" />
+            </div>
+            <div>
+              <label for="20sec">20</label>
+              <input type="radio" id="20sec" name="radio" value="20 sec" />
+            </div>
+            <div>
+              <label for="30sec">30</label>
+              <input type="radio" id="30sec" name="radio" value="30 sec" />
+            </div>
           </div>
-          <div>
-            <label for="20sec">20</label>
-            <input type="radio" id="20sec" name="radio" value="20 sec" />
+          <!--  -->
+          <div id="themes" class="themes">
+            <span class="titles">Temas</span>
+            <!--  -->
+            <label for="Ciencia">Ciencia</label>
+            <input type="checkbox" class="checkTheme" value="Ciencias" />
+            <!--  -->
+            <label for="Geografía">Geografía</label>
+            <input type="checkbox" class="checkTheme" value="Geografía" />
+            <!--  -->
+            <label for="Arte">Arte</label>
+            <input type="checkbox" id="Arte" class="checkTheme" value="Arte" />
+            <!--  -->
+            <label for="Historia">Historia</label>
+            <input type="checkbox" class="checkTheme" value="Historia" />
+            <!--  -->
+            <label for="Mitología">Mitología</label>
+            <input type="checkbox" class="checkTheme" value="Mitología" />
+            <!--  -->
+            <label for="CulturalGeneral">Cultura General</label>
+            <input type="checkbox" class="checkTheme" value="Cultura General" />
           </div>
-          <div>
-            <label for="30sec">30</label>
-            <input type="radio" id="30sec" name="radio" value="30 sec" />
+          <div class="containerButtonPlay">
+            <span class="selectionTheme">Selecciona al menos un tema</span>
+            <button id="buttonPlay" class="button" disabled>JUGAR</button>
           </div>
-        </div>
-        <!--  -->
-        <div id="themes" class="themes">
-          <span class="titles">Temas</span>
-          <!--  -->
-          <label for="Ciencia">Ciencia</label>
-          <input type="checkbox" id="Ciencia" />
-          <!--  -->
-          <label for="Geografía">Geografía</label>
-          <input type="checkbox" id="Geografía" />
-          <!--  -->
-          <label for="Arte">Arte</label>
-          <input type="checkbox" id="Arte" />
-          <!--  -->
-          <label for="Historia">Historia</label>
-          <input type="checkbox" id="Historia" />
-          <!--  -->
-          <label for="Mitología">Mitología</label>
-          <input type="checkbox" id="Mitología" />
-          <!--  -->
-          <label for="CulturalGeneral">Cultura General</label>
-          <input type="checkbox" id="CulturalGeneral" />
-        </div>
-        <div class="containerButtonPlay">
-          <span class="selectionTheme">Selecciona al menos un tema</span>
-          <button class="button">JUGAR</button>
         </div>
       </div>
       <!--  -->
       <div id="questions" class="questions">
         <h2>Pregunta</h2>
-        <span>Respuesta 1</span>
-        <span>Respuesta 2</span>
-        <span>Respuesta 3</span>
-        <span>Respuesta 4</span>
+        <div class="containerButtonsResponse">
+          <button class="responseButton">Respuesta 1</button>
+          <button class="responseButton">Respuesta 2</button>
+          <button class="responseButton">Respuesta 3</button>
+          <button class="responseButton">Respuesta 4</button>
+        </div>
       </div>
     </main>
     <script src="./js/scripts.js"></script>

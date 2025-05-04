@@ -21,9 +21,17 @@ nav ul {
 body {
   margin: 0;
   font-family: sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 .configurationPlay{
-  
+  background-image: url(../photo.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 650px;
+  width: 350px;
+  border-radius: 32px;
 }
 .numberOfQuestions {
   display: flex;
@@ -40,6 +48,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+
 }
 .time {
   display: flex;
@@ -52,17 +61,24 @@ body {
   font-weight: 700;
 }
 .questions {
-  padding-inline: 50px;
+ 
   display: flex;
  flex-direction: column;
   /* display: none; */
 }
 .containerButtonPlay {
-  display: flex;
-  flex-direction: column;
+ display: flex;
+ justify-content: center;
 }
-.button {
+.button-checked {
   width: 150px;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  background-color:rgb(43, 0, 145);
+  color: white;
+  box-shadow: 0 4px 8px rgb(255, 70, 255);
+  font-weight: 600;
 }
 .selectionTheme {
   margin-bottom: 10px;
@@ -73,7 +89,7 @@ body {
 }
 .containerButtonsResponse{
 display: grid;
-grid-template-columns: repeat(2, 250px);
+grid-template-columns: 250px;
 gap: 20px;
 
 }

@@ -1310,10 +1310,17 @@ const chooseTheme = () => {
   const themeCheck =
     document.querySelectorAll('.checkTheme:checked').length > 0;
   buttonPlayElement.disabled = !themeCheck;
-  console.log('Botón de Jugar habilitado:', !buttonPlayElement.disabled);
+
+  if (themeCheck) {
+    buttonPlayElement.classList.add('button-checked');
+  } else {
+    buttonPlayElement.classList.remove('button-checked');
+  }
+
+  console.log(!buttonPlayElement.disabled);
 };
 
-//cambia la pantalla a preguntas
+// Pantalla de juego: cambia la pantalla a preguntas
 const gameScreen = () => {
   // Filtramos las preguntas seleccionadas
   const questions = cuantityQuestionsSelected();

@@ -1,11 +1,3 @@
-// range y number
-const numberRangeElement = document.getElementById('numberRange');
-const rangeElement = document.getElementById('range');
-// contenedor timers
-const timeElement = document.getElementById('time');
-const buttonPlayElement = document.getElementById('buttonPlay');
-const themesElement = document.getElementById('themes');
-const configurationPlayElement = document.getElementById('configurationPlay');
 const QUESTIONS = {
   history: [
     {
@@ -1264,23 +1256,75 @@ const QUESTIONS = {
     }
   ]
 };
+// Range y número
+const numberRangeElement = document.getElementById('numberRange');
+const rangeElement = document.getElementById('range');
 
+// Contenedor timers
+const timeElement = document.getElementById('time');
+const buttonPlayElement = document.getElementById('buttonPlay');
+const themesElement = document.getElementById('themes');
+const configurationPlayElement = document.getElementById('configurationPlay');
+
+// temas seleccionados y filtrar
+const cuantityQuestionsSelected = () => {
+  const checkBoxTheme = document.querySelectorAll('.checkTheme:checked');
+  const selectionThemeUser = [];
+
+  console.log(checkBoxTheme);
+
+  checkBoxTheme.forEach(checkBox => {
+    selectionThemeUser.push(checkBox.value);
+  });
+
+  console.log(selectionThemeUser);
+
+  let filteredQuestions = [];
+
+  // Filtrar preguntas
+  selectionThemeUser.forEach(theme => {
+    if (QUESTIONS[theme]) {
+      console.log(theme);
+      filteredQuestions = filteredQuestions.concat(QUESTIONS[theme]);
+    } else {
+      console.log(theme);
+    }
+  });
+
+  console.log(filteredQuestions);
+
+  return filteredQuestions;
+};
+
+// Función para actualizar el número del range
 const getNumberRange = () => {
-  // cambia el numero del range
   const rangeValue = rangeElement.value;
   numberRangeElement.textContent = rangeValue;
 };
 
+// Llamada para obtener el número al cargar
 getNumberRange();
 
-// elegir tema para habilitar el boton de jugar
+// Elegir tema para habilitar el botón de jugar
 const chooseTheme = () => {
   const themeCheck =
     document.querySelectorAll('.checkTheme:checked').length > 0;
   buttonPlayElement.disabled = !themeCheck;
+  console.log('Botón de Jugar habilitado:', !buttonPlayElement.disabled);
 };
-// click en boton de jugar cambiar de pantalla a preguntas
+
+//cambia la pantalla a preguntas
 const gameScreen = () => {
+  // Filtramos las preguntas seleccionadas
+  const questions = cuantityQuestionsSelected();
+
+  // if (questions.length === 0) {
+  //   // Si no se han seleccionado preguntas, mostramos el mensaje
+
+  // }
+
+  console.log(questions);
+
   configurationPlayElement.classList.add('hide');
 };
 

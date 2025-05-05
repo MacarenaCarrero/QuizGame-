@@ -83,6 +83,12 @@ body {
   box-shadow: 0 4px 8px rgb(255, 70, 255);
   font-weight: 600;
 }
+.button-checked:disabled {
+  background-color: rgb(187 171 224/0.4);
+  color: rgba(233, 230, 240, 0.4);
+  box-shadow: none;
+  font-weight: 100;
+}
 .selectionTheme {
   margin-bottom: 10px;
 }

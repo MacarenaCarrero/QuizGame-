@@ -1314,7 +1314,7 @@ const chooseTheme = () => {
   if (themeCheck) {
     buttonPlayElement.classList.add('button-checked');
   } else {
-    buttonPlayElement.classList.remove('button-checked');
+    buttonPlayElement.classList.add('button-checked:disabled');
   }
 
   console.log(!buttonPlayElement.disabled);
